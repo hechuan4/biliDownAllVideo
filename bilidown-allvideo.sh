@@ -26,20 +26,6 @@ Tip="${Green_font_prefix}[注意]${Font_color_suffix}"
 #对rssContent进行二次正则处理,获得下载链接并写入文件。
 #biliLinks=$(egrep -o '[h]ttps://www.bilibili.com/.*\w{10}' $reRssContent >> $ckDanmakuPath/biliLinks.txt)
 
-## 正则:
-## <link>https://www.bilibili.com/.*?</link>
-## (?<=<link>)https://www.bilibili.com/.*?(?=</link>) 不能用?
-## [h]ttps://www.bilibili.com/.*\w{10}
-## https:\/\/www\.bilibili\.com\/video\/BV\w{10}
-## (https://www.bilibili.com/video/BV\w{10})(?!.*\1)
-## http://i[0-9]\.hdslb\.com\/bfs\/archive\/[a-zA-Z0-9]*\.jpg
-
-## 标题处理:<title>\s*<!\[CDATA\[(.*?)\]\]>\s*</title>
-## 去掉所有<title>:<title>(.*?)</title>|<!\[CDATA\[(.*?)\]\]>
-## sed命令 去掉字符并把第一行删除:sed '1d;s/^.\{16\}//;s/.\{11\}$//'
-
-## sed命令 sed 's/^/\/root\/biliDownAllVideo\/bilidown-allvideo.sh /'
-## sed命令 开头新加一行，内容是#!/bin/bash: sed -i '1i\#!/bin/bash'
 
 wgetRssUrl(){
 	# 抓取rss更新
