@@ -31,11 +31,11 @@ rssURL="http://127.0.0.1:1200/bilibili/user/video-all/$biliUpUid"
 
 `bash bilidown-allvideo.sh`
 
-大概会自动帮你在 `run`目录生产一份 `xxxx-all-down.sh` 的脚本
+大概会自动帮你在 `run`目录生成一份 `xxxx-all-down.sh` 的脚本
 
 然后执行`run`目录的 `xxxx-all-down.sh` 的脚本
 
-`bash run xxxx-all-down.sh  `
+`bash run/xxxx-all-down.sh  `
 
 大概就开始下载封面,视频和弹幕了.
 
